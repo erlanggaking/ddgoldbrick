@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+  }
+}
+
+@layer components {
+  /* DD Gold Brick Brand Colors */
+  .bg-dd-gold {
+    background-color: #D4AF37;
+  }
+  
+  .text-dd-gold {
+    color: #D4AF37;
+  }
+  
+  .border-dd-gold {
+    border-color: #D4AF37;
+  }
+  
+  .bg-dd-gold-dark {
+    background-color: #B8960C;
+  }
+  
+  .text-dd-gold-dark {
+    color: #B8960C;
+  }
+  
+  .bg-dd-black {
+    background-color: #1A1A1A;
+  }
+  
+  .text-dd-black {
+    color: #1A1A1A;
+  }
+  
+  .bg-dd-red {
+    background-color: #E3000B;
+  }
+  
+  .text-dd-red {
+    color: #E3000B;
+  }
+  
+  .bg-dd-yellow {
+    background-color: #FFD500;
+  }
+  
+  .text-dd-yellow {
+    color: #FFD500;
+  }
+
+  /* LEGO Store-style buttons */
+  .btn-primary {
+    @apply bg-dd-gold text-white font-bold py-3 px-6 rounded-none uppercase tracking-wider text-sm hover:bg-dd-gold-dark transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-dd-black text-white font-bold py-3 px-6 rounded-none uppercase tracking-wider text-sm hover:bg-gray-800 transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-dd-black text-dd-black font-bold py-3 px-6 rounded-none uppercase tracking-wider text-sm hover:bg-dd-black hover:text-white transition-all duration-300;
+  }
+
+  /* LEGO Store-style cards */
+  .card-product {
+    @apply bg-white border border-gray-200 transition-all duration-300 hover:shadow-lg hover:border-gray-300;
+  }
+
+  .card-product:hover .card-product-image {
+    @apply scale-105;
+  }
+
+  /* Section titles */
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-dd-black uppercase tracking-wider;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-gray-500 mt-2;
+  }
+
+  /* Badge styles */
+  .badge-new {
+    @apply bg-dd-gold text-white text-xs font-bold px-3 py-1 uppercase tracking-wider;
+  }
+
+  .badge-sale {
+    @apply bg-dd-red text-white text-xs font-bold px-3 py-1 uppercase tracking-wider;
+  }
+
+  .badge-rare {
+    @apply bg-dd-black text-white text-xs font-bold px-3 py-1 uppercase tracking-wider;
+  }
+
+  /* Input styles */
+  .input-primary {
+    @apply w-full border-2 border-gray-300 px-4 py-3 text-sm focus:border-dd-gold focus:outline-none transition-colors;
+  }
+
+  /* Navigation link hover */
+  .nav-link {
+    @apply text-sm font-medium uppercase tracking-wider text-dd-black hover:text-dd-gold transition-colors;
+  }
+
+  /* Mega menu */
+  .mega-menu {
+    @apply absolute top-full left-0 w-full bg-white shadow-xl border-t-2 border-dd-gold z-50;
+  }
+
+  /* Announcement bar */
+  .announcement-bar {
+    @apply bg-dd-black text-white text-center py-2 text-xs font-medium uppercase tracking-wider;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Smooth scroll */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Text gradient */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gold shimmer animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, #D4AF37 0%, #FFD700 25%, #D4AF37 50%, #FFD700 75%, #D4AF37 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Slide up animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+}
