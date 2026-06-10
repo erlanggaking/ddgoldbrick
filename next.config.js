@@ -9,7 +9,11 @@ const nextConfig = {
       { protocol: 'https', hostname: 'lego.com' },
       { protocol: 'https', hostname: 'images.lexinter.net' },
       { protocol: 'https', hostname: 'images.brickset.com' },
+      { protocol: 'https', hostname: 'cdn.brickset.com' },
     ],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 

@@ -26,44 +26,48 @@ export const legoThemes: LegoTheme[] = [
   { id: '10', name: 'Icons', slug: 'icons', description: 'Fan-favorite collections and sculptures', image: '/themes/icons.jpg', productCount: 34, icon: themeIcons['Icons'] },
 ];
 
-// LEGO product images from Brickset CDN (reliable source)
+// LEGO product images - using local placeholder images for reliable deployment
+const getPlaceholderImage = (setNumber: string): string => {
+  return `/images/products/${setNumber}.svg`;
+};
+
 const legoImages: Record<string, string[]> = {
   '75192': [
-    'https://images.brickset.com/sets/images/75192-1.jpg',
-    'https://images.brickset.com/sets/images/75192-2.jpg',
+    getPlaceholderImage('75192'),
+    getPlaceholderImage('75192'),
   ],
   '71043': [
-    'https://images.brickset.com/sets/images/71043-1.jpg',
+    getPlaceholderImage('71043'),
   ],
   '42096': [
-    'https://images.brickset.com/sets/images/42096-1.jpg',
+    getPlaceholderImage('42096'),
   ],
   '60348': [
-    'https://images.brickset.com/sets/images/60348-1.jpg',
+    getPlaceholderImage('60348'),
   ],
   '10305': [
-    'https://images.brickset.com/sets/images/10305-1.jpg',
+    getPlaceholderImage('10305'),
   ],
   '71747': [
-    'https://images.brickset.com/sets/images/71747-1.jpg',
+    getPlaceholderImage('71747'),
   ],
   '42143': [
-    'https://images.brickset.com/sets/images/42143-1.jpg',
+    getPlaceholderImage('42143'),
   ],
   '71040': [
-    'https://images.brickset.com/sets/images/71040-1.jpg',
+    getPlaceholderImage('71040'),
   ],
   '41708': [
-    'https://images.brickset.com/sets/images/41708-1.jpg',
+    getPlaceholderImage('41708'),
   ],
   '42160': [
-    'https://images.brickset.com/sets/images/42160-1.jpg',
+    getPlaceholderImage('42160'),
   ],
   '75978': [
-    'https://images.brickset.com/sets/images/75978-1.jpg',
+    getPlaceholderImage('75978'),
   ],
   '10256': [
-    'https://images.brickset.com/sets/images/10256-1.jpg',
+    getPlaceholderImage('10256'),
   ],
 };
 

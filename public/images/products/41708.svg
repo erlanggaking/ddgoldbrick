@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#1a1a1a"/>
+  <rect x="50" y="100" width="300" height="200" rx="10" fill="#333"/>
+  <text x="200" y="180" font-family="Arial" font-size="24" fill="#d4af37" text-anchor="middle" font-weight="bold">LEGO</text>
+  <text x="200" y="220" font-family="Arial" font-size="18" fill="#fff" text-anchor="middle">Set #41708</text>
+  <circle cx="200" cy="120" r="30" fill="#d4af37"/>
+  <text x="200" y="128" font-family="Arial" font-size="20" fill="#1a1a1a" text-anchor="middle" font-weight="bold">★</text>
+</svg>
